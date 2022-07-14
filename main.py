@@ -10,8 +10,8 @@ from tensorflow.keras.models import load_model
 
 def getPrediction(filename):
     
-    classes = ['Covid', 'Healthy', 
-               'Lung Tumor', 'Common Pneumonia']
+    classes = ['Healthy', 'Lung Tumor', 
+               'Common Pneumonia', 'Covid']
     le = LabelEncoder()
     le.fit(classes)
     le.inverse_transform([2])
