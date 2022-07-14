@@ -26,8 +26,8 @@ def getPrediction(filename):
     img = np.expand_dims(img, axis=0)  #Get it tready as input to the network       
     
     pred = my_model.predict(img) #Predict                    
-    pred_class = dic[pred[0]]
+    pred_class = dic[[np.argmax(pred)]]
     
     print("Diagnosis is:", pred_class)
-    return pred_class,pred
+    return pred_class
 
