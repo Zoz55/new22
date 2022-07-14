@@ -23,7 +23,8 @@ def getPrediction(filename):
     SIZE = 64 #Resize to same size as training images
     img_path = 'static/'+filename
     img = np.asarray(Image.open(img_path).resize((SIZE,SIZE)))
-    
+    img=img.convert('RGB')
+
     img = img/255.      #Scale pixel values
     
     img = np.expand_dims(img, axis=0)  #Get it tready as input to the network       
