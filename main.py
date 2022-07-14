@@ -22,8 +22,9 @@ def getPrediction(filename):
     
     SIZE = 64 #Resize to same size as training images
     img_path = 'static/'+filename
-    img = np.asarray(Image.open(img_path).resize((SIZE,SIZE)))
-    img=img.convert('RGB')
+    img= Image.open(img_path).resize((SIZE,SIZE))
+    img= img.convert('RGB')
+    img= np.asarray(img)
 
     img = img/255.      #Scale pixel values
     
