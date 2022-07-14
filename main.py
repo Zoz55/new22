@@ -9,12 +9,7 @@ from tensorflow.keras.models import load_model
 
 
 def getPrediction(filename):
-    
-    classes = ['Healthy', 'Lung Tumor', 
-               'Common Pneumonia', 'Covid']
-    le = LabelEncoder()
-    le.fit(classes)
-    le.inverse_transform([2])
+    dic = {0 : 'Covid', 1 : 'Healthy', 2 : 'Lung Tumor', 3 : 'Common Pneumonia'}
     
     
     #Load model
@@ -31,11 +26,8 @@ def getPrediction(filename):
     img = np.expand_dims(img, axis=0)  #Get it tready as input to the network       
     
     pred = my_model.predict(img) #Predict                    
+    pred_class = dic[pred[0]]
     
-    #Convert prediction to class name
-    pred_class = le.inverse_transform([np.argmax(pred)])[0]
     print("Diagnosis is:", pred_class)
     return pred_class,pred
 
-
-#test_prediction =getPrediction('example.jpg')
