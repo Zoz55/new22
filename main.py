@@ -35,7 +35,7 @@ def getPrediction(filename):
     #Convert prediction to class name
     pred_class = le.inverse_transform([np.argmax(pred)])[0]
     print("Diagnosis is:", pred_class)
-    return pred_class
+    return pred_class,pred
 
 
 #test_prediction =getPrediction('example.jpg')
