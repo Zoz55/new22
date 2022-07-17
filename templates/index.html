@@ -1,40 +1,30 @@
 <!doctype html>
 <html >
-<head>
-  <meta charset="UTF-8">
-  
-  <!-- Make it compatible to mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CT Scan Lung Disease Prediction</title>
-  <style>
-	body {
-  background-image: url('pexels-daniel-frank-287227.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
- </style>
-
-  
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Make it compatible to mobile devices -->
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<title>CT Scan Lung Disease Prediction</title>
+		<link rel="stylesheet" href="mystyle.css">
+	</head>
 	
 
-<body>
+	<body>
 
-<h2 class ="text-cenetr" style="color:black;">CT Scan Lung Disease Prediction</h2><p>
-<h4 class ="text-cenetr" style="color:black;">Upload an image and click submit</h4>
+		<h2 class ="text-cenetr" style="color:black;">CT Scan Lung Disease Prediction</h2><p>
+		<h4 class ="text-cenetr" style="color:black;">Upload an image and click submit</h4>
 
 
-<form class ="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
-    <dl>
-	<p style="color:Violet;">
-		<input class = "form-contrpl" type="file" name="file" autocomplete="off" required>
-	</p>
-    </dl>
-    <p style="color:Violet;">
-	<input class = "btn btn-primary mt-3" type="submit" name="submit" value="Submit">
-    </p>
-</form>
+		<form class ="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
+    		<dl>
+				<p style="color:Violet;">
+					<input class = "form-contrpl" type="file" name="file" autocomplete="off" required>
+				</p>
+    		</dl>
+    		<p style="color:Violet;">
+				<input class = "btn btn-primary mt-3" type="submit" name="submit" value="Submit">
+    		</p>
+		</form>
 
 
 
@@ -48,9 +38,6 @@
 	{% endwith %}
 </p>
 
-
-
-
-
+		
 </body>
 </html>
