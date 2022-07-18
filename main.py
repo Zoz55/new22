@@ -10,7 +10,7 @@ from tensorflow.keras.models import load_model
 
 def getPrediction(filename):
    
-     dic = {0 : 'Covid', 1 : 'Healthy', 2 : 'Lung Tumor', 3 : 'Common Pneumonia'}
+    dic = {0 : 'Covid', 1 : 'Healthy', 2 : 'Lung Tumor', 3 : 'Common Pneumonia'}
     
     #Load model
     my_model=load_model("chest_model_deploy.h5")
