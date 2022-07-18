@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 
 
 def getPrediction(filename):
-    dic = {0 : 'Covid', 1 : 'Healthy', 2 : 'Lung Tumor', 3 : 'Common Pneumonia'}
+   
     
     
     #Load model
