@@ -22,16 +22,27 @@
                 text-align: center;
                 color:black;
             }
-            
+            h3 {
+                text-align: center;
+                color:black;
+            }
+			img {
+                display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+  				width: 50%;
+            }
             p {
                 text-align: center;
                 text-decoration: none;
                 font-size: 20px;
             }
-            form-contrpl{
-                
-            }
-            
+    		.file-custom{
+				-webkit-box-sizing: border-box;
+ 				-moz-box-sizing: border-box;
+  				box-sizing: border-box;
+			}
+	
         </style>
     </head>
     <body>
@@ -40,20 +51,21 @@
         
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
-            
-                <p style="color:Violet;">
-		            <input type="file" name="file" autocomplete="off" required>
-	            </p>
+            	<label class="file">
+  					<input class="custom-file-input" type="file" id="file" aria-label="File browser">
+  					<span class="file-custom"></span>
+				</label>
+				
             </dl>
             <p >
                 <input type="submit" name="submit" value="Submit">
             </p>
         </form>
         
-        <p style="color:MediumSeaGreen;">
+        <p style="color:black;">
 	{% with messages = get_flashed_messages() %}
 	  {% if messages %}
-        Diagnosis for the following image is: <u><h3 style="color:MediumSeaGreen;">{{ messages[0] }}</h3></u><br>
+        Diagnosis for the following image is: <u><h3 style="color:black;">{{ messages[0] }}</h3></u><br>
         <img src="{{ messages[1] }}" width="300", height="225">
        
 	  {% endif %}
