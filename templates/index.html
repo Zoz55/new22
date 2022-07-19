@@ -13,86 +13,103 @@
                 background-size: cover;
                 backdrop-filter: blur(1px) saturate(80%);
             }
+
             h2 {
                 text-align: center;
-                color:black;
+                color: black;
             }
 
             h4 {
                 text-align: center;
-                color:black;
+                color: black;
             }
+
             h3 {
                 text-align: center;
-                color:black;
+                color: black;
             }
-			img {
+
+            img {
                 display: block;
-  				margin-left: auto;
-  				margin-right: auto;
-  				width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
             }
+
             p {
                 text-align: center;
                 text-decoration: none;
                 font-size: 20px;
             }
-    		.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-		
-		.inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
-}
 
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: red;
-}
-		.inputfile + label {
-	cursor: pointer; /* "hand" cursor */
-}
-		.inputfile:focus + label {
-	outline: 1px dotted #000;
-	outline: -webkit-focus-ring-color auto 5px;
-}
+            .inputfile {
+                
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+               	
+				padding: 15px 32px;
+				text-align: center;
+            }
+
+            .inputfile + label {
+                font-size: 1.25em;
+                font-weight: 500;
+                color: white;
+                background-color: black;
+                display: inline-block;
+            }
+
+            .inputfile + label {
+                cursor: pointer;
+                /* "hand" cursor */
+            }
+
+            .inputfile:focus + label {
+                outline: 1px dotted #000;
+                outline: -webkit-focus-ring-color auto 5px;
+            }
 		
-	
+			.submitbutton{
+				cursor: pointer;
+				font-size: 1.25em;
+                font-weight: 500;
+                color: white;
+                background-color: black;
+                display: inline-block;
+				padding: 15px 32px;
+				text-align: center;
+				height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+			}
+			
+			
+			
+			
         </style>
     </head>
     <body>
         <h2 class="text-cenetr">CT Scan Lung Disease Prediction</h2>
         <h4 class="text-cenetr">Upload an image and click submit</h4>
-        
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
-            	<input type="file" name="file" id="file" class="inputfile" />
-		<label for="file">Choose a file</label>
-				
+                <input type="file" name="file" id="file" class="inputfile"/>
+                <label for="file">Choose a file</label>
             </dl>
-            <p >
-                <input type="submit" name="submit" value="Submit">
+            <p>
+                <input class="submitbutton" type="submit" name="submit" value="Submit">
             </p>
         </form>
-        
         <p style="color:black;">
-	{% with messages = get_flashed_messages() %}
-	  {% if messages %}
-        Diagnosis for the following image is: <u><h3 style="color:black;">{{ messages[0] }}</h3></u><br>
-        <img src="{{ messages[1] }}" width="300", height="225">
-       
-	  {% endif %}
-	{% endwith %}
-</p>
-        
+            Diagnosis for the following image is: 
+            <u>
+                <h3 style="color:black;">Covid</h3>
+            </u>
+            <br>
+            <img src="static/clean-medical-background_53876-116875.webp" width="300" , height="225">
+        </p>
     </body>
 </html>
