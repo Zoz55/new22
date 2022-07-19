@@ -37,11 +37,35 @@
                 text-decoration: none;
                 font-size: 20px;
             }
-    		.file-custom{
-				-webkit-box-sizing: border-box;
- 				-moz-box-sizing: border-box;
-  				box-sizing: border-box;
-			}
+    		.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+		
+		.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+		.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+		.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+		
 	
         </style>
     </head>
@@ -51,10 +75,8 @@
         
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
-            	<label class="file">
-  					<input class="custom-file-input" type="file" id="file" aria-label="File browser">
-  					<span class="file-custom"></span>
-				</label>
+            	<input type="file" name="file" id="file" class="inputfile" />
+		<label for="file">Choose a file</label>
 				
             </dl>
             <p >
