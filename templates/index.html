@@ -28,7 +28,19 @@
                 text-decoration: none;
                 font-size: 20px;
             }
-            
+           input[type="file" i] {
+                appearance: none;
+                background-color: initial;
+                cursor: default;
+                align-items: baseline;
+                color: inherit;
+                text-overflow: ellipsis;
+                white-space: pre;
+                text-align: start !important;
+                padding: initial;
+                border: initial;
+                overflow: hidden !important;
+} 
         </style>
     </head>
     <body>
@@ -37,9 +49,14 @@
         
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
-                <p>
-                    <input class="form-contrpl" value="#563d7c" type="file" name="file" autocomplete="off" required>
-                </p>
+            
+                <label for="inputTag">
+                    Select Image <br/>
+                    <i class="fa fa-2x fa-camera"></i>
+                    <input id="inputTag" type="file"/>
+                    <br/>
+                    <span id="imageName"></span>
+                </label>
             </dl>
             <p >
                 <input class="btn btn-info btn-lg" type="submit" name="submit" value="Submit">
