@@ -51,6 +51,7 @@
                	border-width: 5px;
 		padding: 5px 5px;
 		text-align: center;
+		    overflow: hidden;
             }
 
             .inputfile + label {
@@ -59,7 +60,7 @@
                 color: white;
                 background-color: black;
                 display: inline-block;
-				cursor: pointer;
+		cursor: pointer;
 			}
 
             
@@ -89,13 +90,16 @@
                 <input class="submitbutton" type="submit" name="submit" value="Submit">
             </p>
         </form>
-        <p style="color:black;">
-            Diagnosis for the following image is: 
-            <u>
-                <h3 style="color:black;">Covid</h3>
-            </u>
-            <br>
-            <img src="static/clean-medical-background_53876-116875.webp" width="300" , height="225">
-        </p>
+        
+	    <p style="color:black;">
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+        Diagnosis for the following image is: <u><h3 style="color:black;">{{ messages[0] }}</h3></u><br>
+        <img src="{{ messages[1] }}" width="300", height="225">
+       
+	  {% endif %}
+	{% endwith %}
+</p>
+
     </body>
 </html>
