@@ -24,14 +24,9 @@
             }
             
             p {
-                background-color: #4CAF50; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
                 text-align: center;
                 text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
+                font-size: 20px;
             }
             
         </style>
@@ -39,15 +34,15 @@
     <body>
         <h2 class="text-cenetr">CT Scan Lung Disease Prediction</h2>
         <h4 class="text-cenetr">Upload an image and click submit</h4>
-        <p>
+        
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
                 <p>
-                    <input class="form-contrpl" type="file" name="file" autocomplete="off" required>
+                    <input class="form-contrpl" value="#563d7c" type="file" name="file" autocomplete="off" required>
                 </p>
             </dl>
             <p >
-                <input class="btn btn-primary mt-3" type="submit" name="submit" value="Submit">
+                <input class="btn btn-info btn-lg" type="submit" name="submit" value="Submit">
             </p>
         </form>
     </body>
