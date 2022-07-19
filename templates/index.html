@@ -11,23 +11,44 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
+                backdrop-filter: blur(1px) saturate(80%);
             }
+            h2 {
+                text-align: center;
+                color:black;
+            }
+
+            h4 {
+                text-align: center;
+                color:black;
+            }
+            
+            p {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            
         </style>
     </head>
     <body>
-        <h2 class="text-cenetr" style="color:black;">CT Scan Lung Disease Prediction</h2>
+        <h2 class="text-cenetr">CT Scan Lung Disease Prediction</h2>
+        <h4 class="text-cenetr">Upload an image and click submit</h4>
         <p>
-        <h4 class="text-cenetr" style="color:black;">Upload an image and click submit</h4>
         <form class="p-3 text-center" method="post" action="/" enctype="multipart/form-data">
             <dl>
-                <p style="color:Violet;">
+                <p>
                     <input class="form-contrpl" type="file" name="file" autocomplete="off" required>
                 </p>
             </dl>
-            <p style="color:Violet;">
+            <p >
                 <input class="btn btn-primary mt-3" type="submit" name="submit" value="Submit">
             </p>
         </form>
-        <p style="color:MediumSeaGreen;"></p>
     </body>
 </html>
